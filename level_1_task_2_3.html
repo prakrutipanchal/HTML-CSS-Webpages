@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple HTML/CSS Website</title>
+
+        <style>
+            *{
+                margin-top: 50px;
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            .textfield
+            {
+                padding: 5px;
+                border-radius: 4px;
+                border: 1px solid black;
+            }
+
+
+            .btn{
+                padding: 10px;
+                width: 45px;
+                background-color: rgb(53, 151, 208);
+                color: white;
+                font-size: medium;
+                border: 1.5px solid black;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .btn:active{
+                background-color: white;
+                color: rgb(53, 151, 208);
+            }
+
+
+
+
+        </style>
+    </head>
+
+    <body style="background-image: url('../images/img2.jpg'); background-size: cover; background-position: center;">
+        <div id="content">
+            <h1 id="heading" class="task_2">Javascript Button Task_2 question_3</h1>
+
+            <input type="text" class="textfield" id="text1" placeholder="Enter 1st number">
+            <input type="text" class="textfield" id="text2" placeholder="Enter 2nd number">
+            <input type="text" class="textfield" id="text3" placeholder="Result is:">
+
+            <br><br>
+            <input type="submit" id="add" onclick="add()" class="btn" value="+">
+            <input type="submit" id="sub" onclick="sub()" class="btn" value="-">
+            <input type="submit" id="mul" onclick="mul()" class="btn" value="*">
+            <input type="submit" id="div" onclick="div()" class="btn" value="/">
+        </div>
+    </body>
+
+    <script>
+        let a = document.getElementById('text1')
+        let b = document.getElementById('text2')
+        let result = document.getElementById('text3')
+
+        function add()
+        {
+            let num1 = parseFloat(a.value) || 0; 
+            let num2 = parseFloat(b.value) || 0;
+            result.value = num1 + num2;
+        }
+        function sub()
+        {
+            let num1 = parseFloat(a.value) || 0;
+            let num2 = parseFloat(b.value) || 0;
+            result.value = num1 - num2;
+        }
+        function mul()
+        {
+            let num1 = parseFloat(a.value) || 0;
+            let num2 = parseFloat(b.value) || 0;
+            result.value = num1 * num2;
+        }
+        function div()
+        {
+            let num1 = parseFloat(a.value) || 0;
+            let num2 = parseFloat(b.value) || 0;
+            result.value = num1 / num2;
+        }
+        
+    </script>
+    
+</html>

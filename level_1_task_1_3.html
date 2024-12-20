@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple HTML/CSS Website</title>
+
+        <style>
+
+            *{
+                margin: 0%;
+            }
+
+            nav
+            {
+                padding: 5px;
+                padding-top: 25px;
+                padding-bottom: 25px;
+            }
+
+            nav ul 
+            {
+                list-style-type: none;
+                display: flex;
+            }
+
+            nav ul li
+            {
+                margin-right: 10px;
+            }
+
+            #dynamic-words {
+                color: #0078d7; 
+                font-weight: bold;
+                transition: opacity 0.5s ease;
+            }
+
+            .link 
+            {
+                padding: 11px;
+                padding-left: 15px;
+                padding-right: 15px;
+                border-radius: 25px;
+                color: white;
+                background-image: linear-gradient(to right, rgb(22, 118, 182), rgb(63, 222, 208));
+                text-align: center; 
+                margin-right: 25px;
+            }
+
+            h1 
+            {
+                margin-top: 90px;
+                font-size: 50px;
+                margin-left: 40px;
+            }
+
+
+
+        </style>
+    </head>
+
+    <body style="background-image: url('../images/img2.jpg'); background-size: cover; background-position: center;">
+
+        <nav>
+            <ul>
+                <li><a class="link" href="#Home">Home</a></li>
+                <li><a class="link" href="#About">About</a></li>
+                <li><a class="link" href="#SignUp">SignUp</a></li>
+                <li><a class="link" href="#Contactus">Contact us</a></li>
+            </ul>
+        </nav>
+
+        <h1>
+            Cognifyz, Transforming the <br> way of 
+            <span id="dynamic-words">Hiring</span>.
+        </h1>
+    </body>
+
+    <script>
+
+            const words = ["Hiring", "Education", "Learning", "Business"];
+            let index = 0;
+
+            function rotateWords() 
+            {
+                const dynamicWords = document.getElementById("dynamic-words");
+                dynamicWords.style.opacity = 0; 
+
+                setTimeout(() => {
+                    index = (index + 1) % words.length; 
+                    dynamicWords.textContent = words[index];
+                    dynamicWords.style.opacity = 1; 
+                }, 500);
+            }
+            setInterval(rotateWords, 2000);
+
+        </script>
+
+    </script>
+    
+</html>

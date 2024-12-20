@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Alert</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('../images/img2.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        .greeting-box {
+            background-color: rgba(27, 25, 25, 0.7);
+            padding: 20px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+            max-width: 300px;
+        }
+        .greeting-box h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #fc8181;
+        }
+        .greeting-box p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="greeting-box" id="greetingBox">
+        <h1 id="greetingText"></h1>
+        <p>Welcome to our site!</p>
+    </div>
+
+    <script>
+        const currentHour = new Date().getHours();
+        let greetingMessage;
+
+        switch (true) {
+            case currentHour < 12:
+                greetingMessage = "Good Morning!";
+                break;
+            case currentHour < 18:
+                greetingMessage = "Good Afternoon!";
+                break;
+            default:
+                greetingMessage = "Good Evening!";
+        }
+
+        document.getElementById("greetingText").innerText = greetingMessage;
+    </script>
+</body>
+</html>

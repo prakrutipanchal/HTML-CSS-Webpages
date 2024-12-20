@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <style>
+            body {
+            margin-top: 10px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(29, 23, 23);
+            background-position: center;
+            background-size: contain;
+            align-items: center;
+            }
+
+            .gallery-container {
+            width: 700px;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            gap: 20px; 
+            background-color: rgb(29, 23, 23);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0px 150px lightgray;
+            }
+
+            .thumbnails {
+            display: flex;
+            flex-direction: column; 
+            gap: 10px;
+            margin-left: 20px;
+            }
+
+            .thumbnail {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, border-color 0.3s;
+            border: 1px solid lightgray;
+            }
+
+            .thumbnail:hover {
+            border-color: #0078ff;
+            transform: scale(1.1); 
+            }
+
+            .enlarged img {
+            width: 400px;
+            margin-left: 120px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: lightgray;
+            }
+
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="gallery-container">
+            <div class="thumbnails">
+              <img src="../images/airbuds2.webp" alt="Thumbnail 1" class="thumbnail">
+              <img src="../images/bluetooth.webp" alt="Thumbnail 2" class="thumbnail">
+              <img src="../images/headphones.webp" alt="Thumbnail 3" class="thumbnail">
+            </div>
+          
+            <div class="enlarged">
+              <img src="../images/cognifyz_image.jpeg" alt="Enlarged Image" id="enlargedImage">
+            </div>
+          </div>
+          
+  
+          <script>
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const enlargedImage = document.getElementById('enlargedImage');
+            
+            thumbnails.forEach(thumbnail => {
+              thumbnail.addEventListener('click', () => {
+                enlargedImage.src = thumbnail.src;
+              })
+            });
+          </script>
+    </body>
+</html>

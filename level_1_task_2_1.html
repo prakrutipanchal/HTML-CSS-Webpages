@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple HTML/CSS Website</title>
+
+        <style>
+            *{
+                margin-top: 50px;
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+
+            #btn{
+                padding: 10px;
+                width: 95px;
+                background-color: rgb(53, 151, 208);
+                color: white;
+                font-size: medium;
+                border: 1.5px solid black;
+                border-radius: 20px;
+                transition: background-color 0.8s ease, color 0.8s ease;
+                cursor: pointer;
+            }
+
+
+
+
+        </style>
+    </head>
+
+    <body style="background-image: url('../images/img2.jpg'); background-size: cover; background-position: center;">
+        <div id="content">
+            <h1 id="heading" class="task_2">Javascript Button Task_2 question_1</h1>
+            <input type="submit" id="btn" value="submit">
+        </div>
+    </body>
+
+    <script>
+        let button1 = document.getElementById('btn')
+        let togglebtn = true;
+        function func()
+        {
+            if(togglebtn)
+            {
+                button1.style.backgroundColor = "white";
+                button1.style.color = "rgb(53, 151, 208)";
+                togglebtn = false;
+            }
+            else 
+            {
+                button1.style.backgroundColor = "rgb(53, 151, 208)";
+                button1.style.color = "white";
+                togglebtn = true;
+            }
+        }
+        button1.addEventListener('click', func);
+    </script>
+    
+</html>

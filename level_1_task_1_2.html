@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple HTML/CSS Website</title>
+
+        <style>
+            *{
+                margin-top: 50px;
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            #img{
+                border: 1px dotted black;
+            }
+
+            #name{
+                margin-top: 50px;
+                padding: 5px;
+                border: 1px solid black;
+                border-radius: 4px;
+            }
+
+            #btn{
+                padding: 10px;
+                width: 95px;
+                background-color: rgb(53, 151, 208);
+                color: white;
+                font-size: medium;
+                border: 1.5px solid black;
+                border-radius: 20px;
+                transition: background-color 0.8s ease, color 0.8s ease;
+            }
+
+            #btn:hover{
+                background-color: white;
+                color: rgb(53, 151, 208);
+            }
+
+            #btn:active{
+                opacity: 0.7;
+            }
+        </style>
+    </head>
+
+    <body style="background-image: url('../images/img2.jpg'); background-size: cover; background-position: center;">
+        <div id="content">
+            <h1 id="heading" class="task_1">HTML/CSS Webpage</h1>
+            <label id="lbl">Please Enter your name:</label>
+            <input type="text" id="name" class="task_1" placeholder="Firstname_Surname"><br>
+            <input type="submit" id="btn" value="submit">
+        </div>
+    </body>
+    
+</html>
